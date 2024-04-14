@@ -1,0 +1,715 @@
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~
+$ cd Documents/GitWorkspace
+bash: cd: Documents/GitWorkspace: No such file or directory
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~
+$ cd Desktop/SI/GitWorkspace
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace
+$ mkdir SI_2024_lab1_111171
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace
+$ cd SI_2024_lab1_111171
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171
+$ git remote add origin https://github.com/ivanapopovska23/SI_2024_lab1_111171.git
+fatal: not a git repository (or any of the parent directories): .git
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171
+$ git init
+Initialized empty Git repository in C:/Users/ext.i.popovska/Desktop/SI/GitWorkspace/SI_2024_lab1_111171/.git/
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ ^C
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git remote add origin https://github.com/ivanapopovska23/SI_2024_lab1_111171.git
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git remote -v
+origin  https://github.com/ivanapopovska23/SI_2024_lab1_111171.git (fetch)
+origin  https://github.com/ivanapopovska23/SI_2024_lab1_111171.git (push)
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git add README.md
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   README.md
+
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git commit -m "Initial commit"
+[master (root-commit) 5409555] Initial commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ ^C
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        SILab1Main.java
+        SILab1_1.java
+        SILab1_2.java
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git add *.java
+warning: in the working copy of 'SILab1Main.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'SILab1_1.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'SILab1_2.java', LF will be replaced by CRLF the next time Git touches it
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git config core.autocrlf true
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   SILab1Main.java
+        new file:   SILab1_1.java
+        new file:   SILab1_2.java
+
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ ^C
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git commit -m "Add starter code"
+[master f9b89bd] Add starter code
+ 3 files changed, 47 insertions(+)
+ create mode 100644 SILab1Main.java
+ create mode 100644 SILab1_1.java
+ create mode 100644 SILab1_2.java
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git log
+commit f9b89bd3b8ee1bdf044b38c197871d19274dd157 (HEAD -> master)
+Author: Ivana Popovska <ivana.popovska@quipu.de>
+Date:   Wed Apr 10 16:34:40 2024 +0200
+
+    Add starter code
+
+commit 54095555c00856fa60f8f5475c458113ee9f92f0
+Author: Ivana Popovska <ivana.popovska@quipu.de>
+Date:   Wed Apr 10 16:04:32 2024 +0200
+
+    Initial commit
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git pull origin master
+fatal: couldn't find remote ref master
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git pull origin
+You asked to pull from the remote 'origin', but did not specify
+a branch. Because this is not the default configured remote
+for your current branch, you must specify a branch on the command line.
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git fetch
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git pull
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> master
+
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git checkout master
+Already on 'master'
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git pull origin
+You asked to pull from the remote 'origin', but did not specify
+a branch. Because this is not the default configured remote
+for your current branch, you must specify a branch on the command line.
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ ^C
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git pull origin master
+fatal: couldn't find remote ref master
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git push -u origin master
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (8/8), 1.12 KiB | 1.12 MiB/s, done.
+Total 8 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/ivanapopovska23/SI_2024_lab1_111171.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~
+$ cd /c/Users/ext.i.popovska/Desktop/SI/GitWorkspace
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace
+$ cd SI_2024_lab1_111171
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git branch bug1
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git branch bug2
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git checkout bug1
+Switched to branch 'bug1'
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (bug1)
+$ git status
+On branch bug1
+nothing to commit, working tree clean
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (bug1)
+$ git log
+commit f9b89bd3b8ee1bdf044b38c197871d19274dd157 (HEAD -> bug1, origin/master, master, bug2)
+Author: Ivana Popovska <ivana.popovska@quipu.de>
+Date:   Wed Apr 10 16:34:40 2024 +0200
+
+    Add starter code
+
+commit 54095555c00856fa60f8f5475c458113ee9f92f0
+Author: Ivana Popovska <ivana.popovska@quipu.de>
+Date:   Wed Apr 10 16:04:32 2024 +0200
+
+    Initial commit
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (bug1)
+$ git branch
+* bug1
+  bug2
+  master
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (bug1)
+$ git add SILab1_1.java
+warning: in the working copy of 'SILab1_1.java', LF will be replaced by CRLF the next time Git touches it
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (bug1)
+$ git config core.autocrlf true
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (bug1)
+$ git commit -m "Fix wrong condition in filterOddLengthStrings"
+[bug1 97111f7] Fix wrong condition in filterOddLengthStrings
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (bug1)
+$ git log
+commit 97111f71c6ae31f683e26b67aedc63728918c83e (HEAD -> bug1)
+Author: Ivana Popovska <ivana.popovska@quipu.de>
+Date:   Sun Apr 14 16:15:19 2024 +0200
+
+    Fix wrong condition in filterOddLengthStrings
+
+commit f9b89bd3b8ee1bdf044b38c197871d19274dd157 (origin/master, master, bug2)
+Author: Ivana Popovska <ivana.popovska@quipu.de>
+Date:   Wed Apr 10 16:34:40 2024 +0200
+
+    Add starter code
+
+commit 54095555c00856fa60f8f5475c458113ee9f92f0
+Author: Ivana Popovska <ivana.popovska@quipu.de>
+Date:   Wed Apr 10 16:04:32 2024 +0200
+
+    Initial commit
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (bug1)
+$ git checkout bug2
+Switched to branch 'bug2'
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (bug2)
+$ git add SILab1_2.java
+warning: in the working copy of 'SILab1_2.java', LF will be replaced by CRLF the next time Git touches it
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (bug2)
+$ git config core.autocrlf true
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (bug2)
+$ git commit -m "Fix wrong condition in makeBigStringFrom"
+[bug2 a7d8c61] Fix wrong condition in makeBigStringFrom
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (bug2)
+$ git log
+commit a7d8c61b3fff748a2f89a1c5dc130506bb9778c1 (HEAD -> bug2)
+Author: Ivana Popovska <ivana.popovska@quipu.de>
+Date:   Sun Apr 14 16:17:59 2024 +0200
+
+    Fix wrong condition in makeBigStringFrom
+
+commit f9b89bd3b8ee1bdf044b38c197871d19274dd157 (origin/master, master)
+Author: Ivana Popovska <ivana.popovska@quipu.de>
+Date:   Wed Apr 10 16:34:40 2024 +0200
+
+    Add starter code
+
+commit 54095555c00856fa60f8f5475c458113ee9f92f0
+Author: Ivana Popovska <ivana.popovska@quipu.de>
+Date:   Wed Apr 10 16:04:32 2024 +0200
+
+    Initial commit
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (bug2)
+$ git checkout bug1
+Switched to branch 'bug1'
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (bug1)
+$ git add SILab1Main.java
+warning: in the working copy of 'SILab1Main.java', LF will be replaced by CRLF the next time Git touches it
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (bug1)
+$ git config core.autocrlf true
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (bug1)
+$ git commit -m "Call method filterOddLengthStrings in main class"
+[bug1 c60512d] Call method filterOddLengthStrings in main class
+ 1 file changed, 1 insertion(+)
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (bug1)
+$ git log
+commit c60512dfbfb942e66140bc257986daa1ed22547e (HEAD -> bug1)
+Author: Ivana Popovska <ivana.popovska@quipu.de>
+Date:   Sun Apr 14 16:26:42 2024 +0200
+
+    Call method filterOddLengthStrings in main class
+
+commit 97111f71c6ae31f683e26b67aedc63728918c83e
+Author: Ivana Popovska <ivana.popovska@quipu.de>
+Date:   Sun Apr 14 16:15:19 2024 +0200
+
+    Fix wrong condition in filterOddLengthStrings
+
+commit f9b89bd3b8ee1bdf044b38c197871d19274dd157 (origin/master, master)
+Author: Ivana Popovska <ivana.popovska@quipu.de>
+Date:   Wed Apr 10 16:34:40 2024 +0200
+
+    Add starter code
+
+commit 54095555c00856fa60f8f5475c458113ee9f92f0
+Author: Ivana Popovska <ivana.popovska@quipu.de>
+Date:   Wed Apr 10 16:04:32 2024 +0200
+
+    Initial commit
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (bug1)
+$ git checkout bug2
+Switched to branch 'bug2'
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (bug2)
+$ git add SILab1Main.java
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (bug2)
+$ git commit -m "Call method makeBigStringFrom in main class"
+[bug2 db7c49d] Call method makeBigStringFrom in main class
+ 1 file changed, 1 insertion(+)
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (bug2)
+$ git log
+commit db7c49de499e1059e746dee250d0e7990ec64c97 (HEAD -> bug2)
+Author: Ivana Popovska <ivana.popovska@quipu.de>
+Date:   Sun Apr 14 16:31:32 2024 +0200
+
+    Call method makeBigStringFrom in main class
+
+commit a7d8c61b3fff748a2f89a1c5dc130506bb9778c1
+Author: Ivana Popovska <ivana.popovska@quipu.de>
+Date:   Sun Apr 14 16:17:59 2024 +0200
+
+    Fix wrong condition in makeBigStringFrom
+
+commit f9b89bd3b8ee1bdf044b38c197871d19274dd157 (origin/master, master)
+Author: Ivana Popovska <ivana.popovska@quipu.de>
+Date:   Wed Apr 10 16:34:40 2024 +0200
+
+    Add starter code
+
+commit 54095555c00856fa60f8f5475c458113ee9f92f0
+Author: Ivana Popovska <ivana.popovska@quipu.de>
+Date:   Wed Apr 10 16:04:32 2024 +0200
+
+    Initial commit
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (bug2)
+$ git branch -r
+  origin/master
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (bug2)
+$ git branch
+  bug1
+* bug2
+  master
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (bug2)
+$ git pull
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> bug2
+
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (bug2)
+$ git push origin
+fatal: The current branch bug2 has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin bug2
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (bug2)
+$ git push -u origin bug2
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 683 bytes | 683.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
+remote:
+remote: Create a pull request for 'bug2' on GitHub by visiting:
+remote:      https://github.com/ivanapopovska23/SI_2024_lab1_111171/pull/new/bug2
+remote:
+To https://github.com/ivanapopovska23/SI_2024_lab1_111171.git
+ * [new branch]      bug2 -> bug2
+branch 'bug2' set up to track 'origin/bug2'.
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (bug2)
+$ git status
+On branch bug2
+Your branch is up to date with 'origin/bug2'.
+
+nothing to commit, working tree clean
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (bug2)
+$ git push -u origin bug1
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 739 bytes | 739.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (3/3), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'bug1' on GitHub by visiting:
+remote:      https://github.com/ivanapopovska23/SI_2024_lab1_111171/pull/new/bug1
+remote:
+To https://github.com/ivanapopovska23/SI_2024_lab1_111171.git
+ * [new branch]      bug1 -> bug1
+branch 'bug1' set up to track 'origin/bug1'.
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (bug2)
+$ git status
+On branch bug2
+Your branch is up to date with 'origin/bug2'.
+
+nothing to commit, working tree clean
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (bug2)
+$ git log
+commit db7c49de499e1059e746dee250d0e7990ec64c97 (HEAD -> bug2, origin/bug2)
+Author: Ivana Popovska <ivana.popovska@quipu.de>
+Date:   Sun Apr 14 16:31:32 2024 +0200
+
+    Call method makeBigStringFrom in main class
+
+commit a7d8c61b3fff748a2f89a1c5dc130506bb9778c1
+Author: Ivana Popovska <ivana.popovska@quipu.de>
+Date:   Sun Apr 14 16:17:59 2024 +0200
+
+    Fix wrong condition in makeBigStringFrom
+
+commit f9b89bd3b8ee1bdf044b38c197871d19274dd157 (origin/master, master)
+Author: Ivana Popovska <ivana.popovska@quipu.de>
+Date:   Wed Apr 10 16:34:40 2024 +0200
+
+    Add starter code
+
+commit 54095555c00856fa60f8f5475c458113ee9f92f0
+Author: Ivana Popovska <ivana.popovska@quipu.de>
+Date:   Wed Apr 10 16:04:32 2024 +0200
+
+    Initial commit
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (bug2)
+$ git branch
+  bug1
+* bug2
+  master
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (bug2)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git branch
+  bug1
+  bug2
+* master
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git merge bug1
+Updating f9b89bd..c60512d
+Fast-forward
+ SILab1Main.java | 1 +
+ SILab1_1.java   | 2 +-
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git pull origin master
+From https://github.com/ivanapopovska23/SI_2024_lab1_111171
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git push -u origin master
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/ivanapopovska23/SI_2024_lab1_111171.git
+   f9b89bd..c60512d  master -> master
+branch 'master' set up to track 'origin/master'.
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git log
+commit c60512dfbfb942e66140bc257986daa1ed22547e (HEAD -> master, origin/master, origin/bug1, bug1)
+Author: Ivana Popovska <ivana.popovska@quipu.de>
+Date:   Sun Apr 14 16:26:42 2024 +0200
+
+    Call method filterOddLengthStrings in main class
+
+commit 97111f71c6ae31f683e26b67aedc63728918c83e
+Author: Ivana Popovska <ivana.popovska@quipu.de>
+Date:   Sun Apr 14 16:15:19 2024 +0200
+
+    Fix wrong condition in filterOddLengthStrings
+
+commit f9b89bd3b8ee1bdf044b38c197871d19274dd157
+Author: Ivana Popovska <ivana.popovska@quipu.de>
+Date:   Wed Apr 10 16:34:40 2024 +0200
+
+    Add starter code
+
+commit 54095555c00856fa60f8f5475c458113ee9f92f0
+Author: Ivana Popovska <ivana.popovska@quipu.de>
+Date:   Wed Apr 10 16:04:32 2024 +0200
+
+    Initial commit
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git checkout bug2
+Switched to branch 'bug2'
+Your branch is up to date with 'origin/bug2'.
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (bug2)
+$ git branch
+  bug1
+* bug2
+  master
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (bug2)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git pull
+Already up to date.
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git checkout bug2
+Switched to branch 'bug2'
+Your branch is up to date with 'origin/bug2'.
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (bug2)
+$ git fetch
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (bug2)
+$ git rebase master
+Auto-merging SILab1Main.java
+CONFLICT (content): Merge conflict in SILab1Main.java
+error: could not apply db7c49d... Call method makeBigStringFrom in main class
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply db7c49d... Call method makeBigStringFrom in main class
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (bug2|REBASE 2/2)
+$ git rebase --continue
+SILab1Main.java: needs merge
+You must edit all merge conflicts and then
+mark them as resolved using git add
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (bug2|REBASE 2/2)
+$ git status
+interactive rebase in progress; onto c60512d
+Last commands done (2 commands done):
+   pick a7d8c61 Fix wrong condition in makeBigStringFrom
+   pick db7c49d Call method makeBigStringFrom in main class
+No commands remaining.
+You are currently rebasing branch 'bug2' on 'c60512d'.
+  (fix conflicts and then run "git rebase --continue")
+  (use "git rebase --skip" to skip this patch)
+  (use "git rebase --abort" to check out the original branch)
+
+Unmerged paths:
+  (use "git restore --staged <file>..." to unstage)
+  (use "git add <file>..." to mark resolution)
+        both modified:   SILab1Main.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (bug2|REBASE 2/2)
+$ git add SILab1Main.java
+[detached HEAD 196c6b6] Choose method makeBigStringFrom in main class while REBASE
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully rebased and updated refs/heads/bug2.
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (bug2)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git merge bug2
+Updating c60512d..196c6b6
+Fast-forward
+ SILab1Main.java | 2 +-
+ SILab1_2.java   | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git pull
+Already up to date.
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git push -u origin master
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 682 bytes | 682.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
+To https://github.com/ivanapopovska23/SI_2024_lab1_111171.git
+   c60512d..196c6b6  master -> master
+branch 'master' set up to track 'origin/master'.
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git checkout bug2
+Switched to branch 'bug2'
+Your branch and 'origin/bug2' have diverged,
+and have 4 and 2 different commits each, respectively.
+  (use "git pull" if you want to integrate the remote branch with yours)
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (bug2)
+$ git pull
+Merge made by the 'ort' strategy.
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (bug2)
+$ git status
+On branch bug2
+Your branch is ahead of 'origin/bug2' by 5 commits.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (bug2)
+$ git push
+Enumerating objects: 1, done.
+Counting objects: 100% (1/1), done.
+Writing objects: 100% (1/1), 238 bytes | 238.00 KiB/s, done.
+Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/ivanapopovska23/SI_2024_lab1_111171.git
+   db7c49d..ced38de  bug2 -> bug2
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (bug2)
+$ git status
+On branch bug2
+Your branch is up to date with 'origin/bug2'.
+
+nothing to commit, working tree clean
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (bug2)
+$

@@ -1,0 +1,343 @@
+1. Kreirav profil.
+
+
+2. Go promeniv main vo master.
+
+
+3. Kreirav remote repo.
+
+
+4. Promeni ja patekata kadesto ke kreiras direktorium
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~
+$ cd Desktop/SI/GitWorkspace
+
+4. Kreiraj lokalen direktorium
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace
+$ mkdir SI_2024_lab1_111171
+
+4. Promeni ja patekata, t.e. vlezi vo toj direktorium
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace
+$ cd SI_2024_lab1_111171
+
+4. Inicilijaziraj go
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171
+$ git init
+Initialized empty Git repository in C:/Users/ext.i.popovska/Desktop/SI/GitWorkspace/SI_2024_lab1_111171/.git/
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+
+
+5. Povrzi go lokalniot repozitorium so remote repozitoriumot
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git remote add origin https://github.com/ivanapopovska23/SI_2024_lab1_111171.git
+
+5. Izlistaj na koi repo-a si povrzan
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git remote -v
+origin  https://github.com/ivanapopovska23/SI_2024_lab1_111171.git (fetch)
+origin  https://github.com/ivanapopovska23/SI_2024_lab1_111171.git (push)
+
+
+
+6. Otkako kreirav README.md datoteka, so git status proveruvam da se osiguram deka ja imam tamu vo untracked changes:
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+6. Ja dodavam datotekata da bide vo staged:
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git add README.md
+
+6. Povtorno povikuvam git status i sega veke gledam deka e staged i moze da se commit-ne:
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   README.md
+
+6. Sega vo izvrsuvam commit so poraka "Initial commit" i povikuvam git status i gledam deka veke nemam nisto ni untracked ni staged, se e cisto:
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git commit -m "Initial commit"
+[master (root-commit) 5409555] Initial commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+
+
+7. Otkako gi simnav trite files, pravam git status za da se osiguram deka imam untracked files.
+Posle toa, odlucuvam namesto da gi dodadam eden po eden, da gi dodadam odednas site files koi se so ekstenzija .java.
+Posle toa zemam sovet od stackoverflow za warning-ot koj mi go dava (poradi windows-unix) i ja ispisuvam komandata git config core.autocrlf true.
+Potoa pravam git status za da se osiguram deka 3te files se staged:
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        SILab1Main.java
+        SILab1_1.java
+        SILab1_2.java
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git add *.java
+warning: in the working copy of 'SILab1Main.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'SILab1_1.java', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'SILab1_2.java', LF will be replaced by CRLF the next time Git touches it
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git config core.autocrlf true
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   SILab1Main.java
+        new file:   SILab1_1.java
+        new file:   SILab1_2.java
+
+7. Pravam git commit so soodvetnata poraka:
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git commit -m "Add starter code"
+
+7. Pravam git log za da vidam timeline history, odnosno koi commits mi se napraveni do sega:
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git log
+
+
+
+8. Sega treba da sinhroniziram so remote repo-to.
+Pred push, treba da se napravi pull, no
+Ako nemam napraveno initial push, togas nema ni remote branch-ot da mi postoi :) zatoa pravam push
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git pull origin master
+fatal: couldn't find remote ref master
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git push -u origin master
+
+
+
+9. Kreiraj branches bug1 i bug2:
+$ git branch bug1
+$ git branch bug2
+
+9. Dopolnitelno moze da proverime koi branches gi imame lokalno so:
+$ git branch
+
+
+
+10. Prefrli se na branch bug1:
+$ git checkout bug1
+
+No, moze i prvo vo cekor 9 da napravime git branch bug2 i potoa git checkout -b bug1 (so ova i se kreira i se prefrlame na toj branch)
+
+
+
+11. Ja popraviv greskata vo filterOddLengthStrings i potoa go dodavam vo staged bidejki bese modified i potoa pravam commit:
+$ git add SILab1_1.java
+$ git commit -m "Fix wrong condition in filterOddLengthStrings"
+
+
+
+12. Prefrli se na branch bug2:
+$ git checkout bug2
+
+
+
+13. Ja popraviv greskata vo makeBigStringFrom i potoa go dodavam vo staged bidejki bese modified i potoa pravam commit:
+$ git add SILab1_2.java
+$ git commit -m "Fix wrong condition in makeBigStringFrom
+
+
+
+14. Se vrakam na bug1:
+$ git checkout bug1
+
+
+
+15. Promenuvam vo klasata SILab1Main, pravam add i commit:
+$ git add SILab1Main.java
+$ git commit -m "Call method filterOddLengthStrings in main class"
+
+
+
+16. Se vrakam na grankata bug2:
+$ git checkout bug2
+
+
+
+17. Promenuvam vo klasata SILab1Main, pravam add i commit:
+$ git add SILab1Main.java
+$ git commit -m "Call method makeBigStringFrom in main class"
+
+
+
+18. Gi sinhroniziram grankite bug1 i bug 2 so remote, pravam push na toa sto go imam komitnato vo dvete (so git branch -r moze da vidam koi granki gi imam remote):
+$ git push -u origin bug2
+$ git push -u origin bug1
+
+
+
+19. Se prefrlam na master:
+$ git checkout master
+
+
+
+20. Ja spojuvam grankata bug1 kon master:
+$ git merge bug1
+Updating f9b89bd..c60512d
+Fast-forward
+ SILab1Main.java | 1 +
+ SILab1_1.java   | 2 +-
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+Nema konflikti pri izvrshuvanje na naredbata (fast-forward)
+
+
+
+21. Sinhroniziraj (promeni prethodno imav vo master, potocno so merge na bug1 kon master):
+$ git pull origin master
+$ git push -u origin master
+
+
+
+22. Se prefrlam na bug 2:
+$ git checkout bug2
+
+
+
+23. Rebase sprema grankata master:
+Pravam fetch i rebase baster i problem deka ima promeni vo ist dokument
+Go menuvam rachno dokumentot i vnesuvam git rebase --continue (i oop problem, treba prvo da se dodadi vo staged)
+Go dodavam i potoa vnesuvam poraka i klikam esc+:wd
+Potocno, slednovo:
+
+$ git fetch
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (bug2)
+$ git rebase master
+Auto-merging SILab1Main.java
+CONFLICT (content): Merge conflict in SILab1Main.java
+error: could not apply db7c49d... Call method makeBigStringFrom in main class
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply db7c49d... Call method makeBigStringFrom in main class
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (bug2|REBASE 2/2)
+$ git rebase --continue
+SILab1Main.java: needs merge
+You must edit all merge conflicts and then
+mark them as resolved using git add
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (bug2|REBASE 2/2)
+$ git status
+interactive rebase in progress; onto c60512d
+Last commands done (2 commands done):
+   pick a7d8c61 Fix wrong condition in makeBigStringFrom
+   pick db7c49d Call method makeBigStringFrom in main class
+No commands remaining.
+You are currently rebasing branch 'bug2' on 'c60512d'.
+  (fix conflicts and then run "git rebase --continue")
+  (use "git rebase --skip" to skip this patch)
+  (use "git rebase --abort" to check out the original branch)
+
+Unmerged paths:
+  (use "git restore --staged <file>..." to unstage)
+  (use "git add <file>..." to mark resolution)
+        both modified:   SILab1Main.java
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (bug2|REBASE 2/2)
+$ git add SILab1Main.java
+[detached HEAD 196c6b6] Choose method makeBigStringFrom in main class while REBASE
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Successfully rebased and updated refs/heads/bug2.
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (bug2)
+$
+
+
+
+24. Prefrli se na master:
+$ git checkout master
+
+
+
+25. Merge-ni go bug2 vo master:
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git merge bug2
+Updating c60512d..196c6b6
+Fast-forward
+ SILab1Main.java | 2 +-
+ SILab1_2.java   | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+Nema konflikt pri merge
+
+
+
+26. Sinhroniziraj i vnimavaj, bug2 ke bide nekolku commits nazad (posle rebase-ot), napravi pull, pa push.
+Proveri so git status deka se e vo red:
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git pull
+Already up to date.
+
+ext.i.popovska@QUINBMUSALA23 MINGW64 ~/Desktop/SI/GitWorkspace/SI_2024_lab1_111171 (master)
+$ git push -u origin master
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 682 bytes | 682.00 KiB/s, done.
+Total 6 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 3 local objects.
+To https://github.com/ivanapopovska23/SI_2024_lab1_111171.git
+   c60512d..196c6b6  master -> master
+branch 'master' set up to track 'origin/master'.
+
+
+
+27. Nema potreba.
+
+
+
+28 i 29 ne se dokumentiraat
